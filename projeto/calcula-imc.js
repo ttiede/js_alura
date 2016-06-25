@@ -1,18 +1,26 @@
-//calcula-imc.js
+var nossosTrs = document.getElementsByClassName("paciente");
 
-var tdPeso = document.getElementById("peso-2");
-var tdAltura = document.getElementById("altura-2");
+for(var posicaoDoTrAtual = 0; posicaoDoTrAtual <= nossosTrs.length - 1; posicaoDoTrAtual++){
+    var trAtual = nossosTrs[posicaoDoTrAtual];
+    var nomeTd = trAtual.getElementsByClassName("info-nome")[0]; // pega tr do nome do paciente atual
+    var pesoTd = trAtual.getElementsByClassName("info-peso")[0]; // pega tr do peso do paciente atual
+    var alturaTd = trAtual.getElementsByClassName("info-altura")[0]; // pega tr do altura do paciente atual
+    var imcTd = trAtual.getElementsByClassName("info-imc")[0]; // pega tr do imc do paciente atual
 
-var paciente = {peso : tdPeso.textContent, altura : tdAltura.textContent};
+    var paciente = {
+        nome : nomeTd.textContent,
+        peso : pesoTd.textContent,
+        altura : alturaTd.textContent
+    }
 
-if(paciente.altura != 0){
-    var imc = paciente.peso / (paciente.altura * paciente.altura);
+    if(paciente.altura != 0){
+        var imcDoPaciente = paciente.peso / (paciente.altura * paciente.altura);
 
-    //buscando o elemento "imc-2"
-    var tdImc = document.getElementById("imc-2");
-    tdImc.textContent = imc; //atualizando o elemento com o IMC calculado
+        imcTd.textContent = imcDoPaciente;
 
-    console.log(imc);
-} else{
-    console.log("Não posso executar uma divisão por 0!");
+        console.log(imcDoPaciente); // 25
+    }else{
+        console.log("Não posso executar uma divisão por 0!");
+    }
+
 }
