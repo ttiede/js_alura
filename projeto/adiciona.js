@@ -16,7 +16,6 @@ botao.addEventListener("click", function(e){
     var todosPacientes = document.querySelector("table");
     todosPacientes.innerHTML +=  novoPaciente;
 
-    campoNome.value = "";
-    campoPeso.value = "";
-    campoAltura.value = "";
+    var formPaciente = document.querySelector("form");
+    formPaciente.reset();
 });
