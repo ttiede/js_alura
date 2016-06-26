@@ -4,7 +4,7 @@ var trs = document.getElementsByTagName("tr");
 
 precorreArray(trs, function(tr) {
 
-	tr.addEventListener("dbclick", function() {
+	tr.addEventListener("dblclick", function() {
 		this.setAttribute("bgcolor", "grey");
 	});
 

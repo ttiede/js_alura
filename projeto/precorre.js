@@ -1,9 +1,9 @@
-
-function percorreArray(trsPacientes, comportamento) {
+//arquivo precorre.js
+function precorreArray(trsPacientes, comportamento) {
 
     for(var posicaoAtual = 0; posicaoAtual <= trsPacientes.length - 1; posicaoAtual++){
 
         var pacienteTrAtual = trsPacientes[posicaoAtual];
-        comportamento(pacienteTrAtual);//função é executada
+        comportamento(pacienteTrAtual);
     }
 }

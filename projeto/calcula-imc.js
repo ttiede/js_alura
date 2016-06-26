@@ -5,7 +5,7 @@ botao.addEventListener("click", function() {
 
 	var trsPacientes = document.getElementsByClassName("paciente");
 
-	percorreArray(trsPacientes, function (pacienteTr){
+	precorreArray(trsPacientes, function (pacienteTr){
 
 	    var tdNome = pacienteTr.getElementsByClassName("info-nome")[0];
 	    var tdPeso = pacienteTr.getElementsByClassName("info-peso")[0];
