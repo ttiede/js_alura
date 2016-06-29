@@ -3,7 +3,6 @@ __Contem :__
 * Interagindo com o console
 * Script como arquivo externo
 * Variáveis e comandos básicos
-
 * Declarando variáveis
 * Operações aritméticas básicas
 * Fluxo de dados com If/Else
